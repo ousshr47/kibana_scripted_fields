@@ -1,0 +1,19 @@
+if (doc['event.severity'].size()==0)
+{
+    return "Normal"
+}
+else
+{
+if (doc['event.severity'].value == 1) 
+{
+  return "High";
+} 
+else if (doc['event.severity'].value == 2) 
+{
+  return "Medium";
+} 
+else if (doc['event.severity'].value == 3) 
+{
+  return "Low";
+}
+}
