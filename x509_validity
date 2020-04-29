@@ -1,0 +1,16 @@
+if ((doc['suricata.eve.tls.notafter'].size()!=0) && (doc['suricata.eve.tls.notbefore'].size()!=0))
+{
+    long now = new Date().getTime();
+    ZonedDateTime inputDateTime = doc['suricata.eve.tls.notafter'].value;
+    long millisDateTime = inputDateTime.toInstant().toEpochMilli();
+    long elapsedTime = (millisDateTime - now) / 1000;
+    
+    if (elapsedTime > 0)
+    {
+        return inputDateTime;
+    }
+    else
+    {
+        return inputDateTime;
+    }
+}
