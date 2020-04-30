@@ -7,10 +7,10 @@ if ((doc['suricata.eve.tls.notafter'].size()!=0) && (doc['suricata.eve.tls.notbe
     
     if (elapsedTime > 0)
     {
-        return inputDateTime;
+        return "Valid";
     }
     else
     {
-        return inputDateTime;
+        return "Expired";
     }
 }
