@@ -1,6 +1,8 @@
 # kibana_scripted_fields
 Scripted fields for Kibana (Suricata logs via Filebeat)
 
+# PLEASE FOLLOW THE CONFIG STEPS CAREFULLY TO OBTAIN THE SAME RESULTS !!! 
+
 ## **Alert Severity**
 
 **Name**: sev
