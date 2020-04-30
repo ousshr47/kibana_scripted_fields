@@ -1,0 +1,7 @@
+if ((doc['network.protocol'].size() != 0 && doc['network.protocol'].value == "http"))
+{
+    if ((doc['user_agent.name'].size() != 0) && (doc['user_agent.version'].size() != 0) && (doc['user_agent.os.name'].size() != 0))
+    {
+        return doc['user_agent.name'].value + " v" + doc['user_agent.version'].value + " from " + doc['user_agent.os.name'].value;
+    }
+}
