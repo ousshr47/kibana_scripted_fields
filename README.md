@@ -51,3 +51,10 @@ Scripted fields for Kibana (Suricata logs via Filebeat)
 
 **config**: 
 ![aa](https://raw.githubusercontent.com/ousshr47/kibana_scripted_fields/master/config_img/x509_validity.png)
+
+## **Destination Domain** 
+
+**Name**: dst_domain
+
+**config**: 
+![aa](https://raw.githubusercontent.com/ousshr47/kibana_scripted_fields/master/config_img/dst_domain.png)
