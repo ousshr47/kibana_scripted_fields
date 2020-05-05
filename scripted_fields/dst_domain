@@ -1,5 +1,12 @@
 if (doc['destination.domain'].size() != 0)
 {
+def m = /[0-9]*.[0-9]*.[0-9]*.[0-9]*/.matcher(doc['destination.domain'].value);
+if (m.matches())
+{
+    return (doc['destination.domain'].value)
+}
+else
+{
     String full = doc['destination.domain'].value;
     int lastIndex1 = full.lastIndexOf('.');
 
@@ -12,5 +19,6 @@ if (doc['destination.domain'].size() != 0)
     String c = b.substring(lastIndex2+1, b.length());
 
     return c+a;
+}    
 }
 return "";
