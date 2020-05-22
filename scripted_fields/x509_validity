@@ -14,3 +14,4 @@ if ((doc['suricata.eve.tls.notafter'].size()!=0) && (doc['suricata.eve.tls.notbe
         return "Expired";
     }
 }
+return ''
