@@ -8,11 +8,11 @@ if ((doc['zeek.x509.certificate.valid.until'].size()!=0) && (doc['zeek.x509.cert
     {
         return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 / 30 + " months";
     }
-    if ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 730)
+    if ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 728)
     {
         return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 / 365 + " years";
     }
-    if (((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 364) && ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 < 730))
+    if (((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 364) && ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 < 728))
     {
         return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 / 365 + " year";
     }
