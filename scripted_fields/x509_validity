@@ -1,7 +1,7 @@
-if ((doc['suricata.eve.tls.notafter'].size()!=0) && (doc['suricata.eve.tls.notbefore'].size()!=0))
+if ((doc['zeek.x509.certificate.valid.until'].size()!=0) && (doc['zeek.x509.certificate.valid.from'].size()!=0))
 {
     long now = new Date().getTime();
-    ZonedDateTime inputDateTime = doc['suricata.eve.tls.notafter'].value;
+    ZonedDateTime inputDateTime = doc['zeek.x509.certificate.valid.until'].value;
     long millisDateTime = inputDateTime.toInstant().toEpochMilli();
     long elapsedTime = (millisDateTime - now) / 1000;
     
