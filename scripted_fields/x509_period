@@ -1,23 +1,23 @@
-if ((doc['suricata.eve.tls.notafter'].size()!=0) && (doc['suricata.eve.tls.notbefore'].size()!=0))
+if ((doc['zeek.x509.certificate.valid.until'].size()!=0) && (doc['zeek.x509.certificate.valid.from'].size()!=0))
 {
-    if ((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 < 30)
+    if ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 < 30)
     {
-        return (doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 + " days";
+        return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 + " days";
     }
-    if (((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 > 60) && ((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 < 365))
+    if (((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 60) && ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 < 365))
     {
-        return (doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 / 30 + " months";
+        return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 / 30 + " months";
     }
-    if ((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 > 730)
+    if ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 730)
     {
-        return (doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 / 365 + " years";
+        return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 / 365 + " years";
     }
-    if (((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 > 364) && ((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 < 730))
+    if (((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 364) && ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 < 730))
     {
-        return (doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 / 365 + " year";
+        return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 / 365 + " year";
     }
-    if (((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 > 30) && ((doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 < 60))
+    if (((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 > 30) && ((doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 < 60))
     {
-        return (doc['suricata.eve.tls.notafter'].value.millis - doc['suricata.eve.tls.notbefore'].value.millis) /1000 / 60 / 60 / 24 / 30 + " month";
+        return (doc['zeek.x509.certificate.valid.until'].value.millis - doc['zeek.x509.certificate.valid.from'].value.millis) /1000 / 60 / 60 / 24 / 30 + " month";
     }
 }
