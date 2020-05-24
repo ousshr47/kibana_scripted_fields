@@ -31,13 +31,6 @@ Scripted fields for Kibana (Suricata logs via Filebeat)
 **config**: 
 ![aa](https://raw.githubusercontent.com/ousshr47/kibana_scripted_fields/master/config_img/browser_details.png)
 
-## **SSL Certificate Issuer Common Name** 
-
-**Name**: x509_issuer_cn
-
-**config**: 
-![aa](https://raw.githubusercontent.com/ousshr47/kibana_scripted_fields/master/config_img/x509_issuer_cn.png)
-
 ## **SSL Certificate Validity Period** 
 
 **Name**: x509_period
